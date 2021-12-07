@@ -769,8 +769,9 @@ class Document(BaseDocument):
 			fn = lambda self, *args, **kwargs: None
 
 		fn.__name__ = str(method)
+		
 		out = Document.hook(fn)(self, *args, **kwargs)
-
+		
 		self.run_notifications(method)
 		run_webhooks(self, method)
 

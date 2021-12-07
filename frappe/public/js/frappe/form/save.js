@@ -184,7 +184,6 @@ frappe.ui.form.save = function (frm, action, callback, btn) {
 			console.log("Already saving. Please wait a few moments.")
 			throw "saving";
 		}
-
 		// ensure we remove new docs routes ONLY
 		if ( frm.is_new() ) {
 			frappe.ui.form.remove_old_form_route();

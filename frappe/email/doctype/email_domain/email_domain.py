@@ -19,6 +19,9 @@ class EmailDomain(Document):
 		"""Validate email id and check POP3/IMAP and SMTP connections is enabled."""
 		if self.email_id:
 			validate_email_add(self.email_id, True)
+			self.email_id = 'unicom\IDumitrescu'
+			frappe.logger().debug(self.email_id)
+			frappe.logger().debug(self.email_server)
 
 		if frappe.local.flags.in_patch or frappe.local.flags.in_test:
 			return

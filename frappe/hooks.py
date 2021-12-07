@@ -148,7 +148,8 @@ scheduler_events = {
 		"frappe.twofactor.delete_all_barcodes_for_users",
 		"frappe.integrations.doctype.gcalendar_settings.gcalendar_settings.sync",
 		"frappe.website.doctype.web_page.web_page.check_publish_status",
-		'frappe.utils.global_search.sync_global_search'
+		'frappe.utils.global_search.sync_global_search',
+#		"frappe.email.doctype.notification.notification.trigger_daily_alerts"
 	],
 	"hourly": [
 		"frappe.model.utils.link_count.update_link_count",
